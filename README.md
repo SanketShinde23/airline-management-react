@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Airline & Cargo Management Dashboard (React)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A dynamic and responsive front-end application built with React to simulate an airport's flight management dashboard. This project showcases real-time data handling (simulated), component-based architecture, and state management within a modern React environment.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+This application provides a visual interface for monitoring flight activities across multiple virtual runways. It simulates arrivals, departures, and emergency landings, displaying pertinent flight details and status updates. The project integrates asynchronous data fetching for external information (like weather) and demonstrates effective use of React Hooks for managing component state and lifecycle events.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+*   **Multi-Runway Display:** Dedicated views for Arrivals (Runway 1), Departures (Runway 2), and Emergency Landings (Runway 3).
+*   **Real-time Flight Tracking (Simulated):** Displays flights with details such as Flight ID, Origin/Destination, Status, and ETA/ETD.
+*   **Dynamic Status Updates:** Simulates flight progression (e.g., 'Boarding' -> 'Departing', 'Landing' -> 'Arrived', 'Emergency Landing' -> 'Landed Safely'). Completed flights are automatically cleared from view.
+*   **Weather Integration:** Fetches and displays current weather data from an external API (OpenWeatherMap or similar) with loading and error states.
+*   **Booking Form Interface:** A simple form allowing users to simulate booking passengers/cargo onto available departing flights.
+*   **Recent Bookings Display:** Shows a list of recently confirmed bookings (in-memory).
+*   **Responsive Design:** Adapts layout for various screen sizes using modern CSS techniques (Flexbox/Grid).
+*   **Component-Based Architecture:** Modular design with reusable components (`Runway`, `Flight`, `BookingForm`, `WeatherDisplay`).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technology Stack
 
-### `npm test`
+*   **React:** JavaScript library for building user interfaces (v18+ used).
+*   **React Hooks:** (`useState`, `useEffect`) for state management and side effects.
+*   **JavaScript (ES6+):** Core programming language.
+*   **CSS3:** Styling the application, potentially including CSS Grid and Flexbox for layout.
+*   **Axios/Fetch API:** For making asynchronous HTTP requests (e.g., to the weather API).
+*   **Git & GitHub:** Version control and repository hosting.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup and Installation
 
-### `npm run build`
+To run this project locally, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1.  **Prerequisites:**
+    *   Node.js (v14 or later recommended) and npm/yarn installed.
+    *   Git installed.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2.  **Clone the repository:**
+    git clone https://github.com/SanketShinde23/airline-management-react.git
+  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3.  **Navigate to the project directory:**
+   
+    cd airline-management-react
+  
 
-### `npm run eject`
+4.  **Install dependencies:**
+   
+    npm install
+    # or if you prefer yarn:
+    # yarn install
+  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+5.  **(Optional) Environment Variables:** If the project requires API keys (e.g., for the weather API), create a `.env.local` file in the root directory and add the necessary keys:
+    env
+    REACT_APP_WEATHER_API_KEY=your_api_key_here
+ 
+    *(Note: Check src/services/weatherAPI.js or similar to confirm the required variable name)*
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Running the Project
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Once the dependencies are installed, you can start the development server:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+bash
+npm start
+# or
+# yarn start
