@@ -1,0 +1,68 @@
+.flight {
+     background-color: #ffffff;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     padding: 8px 12px;
+     margin-bottom: 8px;
+     font-size: 0.9em;
+     display: flex;
+     flex-wrap: wrap; /* Allow items to wrap on small screens */
+     gap: 10px; /* Spacing between elements */
+     align-items: center;
+   }
+   
+   .flight span {
+     display: inline-block; /* Or block depending on desired layout */
+   }
+   
+   .flight-id {
+     font-weight: bold;
+     color: #003366; /* Dark blue */
+     min-width: 70px; /* Give ID some space */
+   }
+   
+   .flight-origin,
+   .flight-destination {
+     color: #333;
+   }
+   
+   .flight-status {
+     font-style: italic;
+     color: #555;
+     flex-grow: 1; /* Allow status to take remaining space */
+     text-align: right; /* Align status to the right */
+     padding-right: 5px; /* Add some space from the edge */
+   }
+   
+   .flight-time {
+     font-size: 0.9em;
+     color: #006400; /* Dark Green */
+     background-color: #e8f5e9; /* Light green background */
+     padding: 2px 5px;
+     border-radius: 3px;
+   }
+   
+   /* Optional: Different border colors based on type */
+   .flight-arrival {
+     border-left: 4px solid #28a745; /* Green for arrivals */
+   }
+   
+   .flight-departure {
+     border-left: 4px solid #ffc107; /* Yellow for departures */
+   }
+   
+   /* Example: Specific status styling */
+   .flight-status-emergency-landing,
+   .flight-status-diverted---emergency {
+       color: #dc3545; /* Red */
+       font-weight: bold;
+   }
+   .flight-status-boarding {
+       color: #17a2b8; /* Info blue */
+   }
+   .flight-status-departing {
+       color: #fd7e14; /* Orange */
+   }
+   .flight-status-landing {
+       color: #20c997; /* Teal */
+   }
